@@ -31,6 +31,14 @@
   </Class>
   <Class Name="BankLibrary.DepositAccount">
     <Position X="0.5" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="BankLibrary.Account" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="1.501" />
+        <Point X="2.375" Y="1.501" />
+        <Point X="2.375" Y="1.5" />
+        <Point X="2" Y="1.5" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAEACAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>DepositAccount.cs</FileName>
