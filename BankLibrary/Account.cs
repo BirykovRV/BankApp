@@ -80,8 +80,8 @@ namespace BankLibrary
 
         public virtual void Put(decimal sum)
         {
-            this.sum = sum;
-            OnAdded(new AccountEventArgs($"На счет поступило {sum}", sum));
+            this.sum += sum;
+            OnAdded(new AccountEventArgs($"На счет поступило {sum}. Ваш баланс: {CurrentSum}. Номер счета: {Id}", sum));
         }        
 
         public virtual decimal Withdraw(decimal sum)
@@ -91,7 +91,7 @@ namespace BankLibrary
             {
                 this.sum -= sum;
                 result = sum;
-                OnWithdrawed(new AccountEventArgs($"Сумма {sum} снята со счета {_id}", sum));
+                OnWithdrawed(new AccountEventArgs($"Сумма {sum} снята со счета {_id}. Ваш баланс: {CurrentSum}. Номер счета: {Id}", sum));
             }
             else
             {
@@ -120,7 +120,7 @@ namespace BankLibrary
         {
             decimal increment = sum * percentage / 100;
             sum += increment;
-            OnCalculated(new AccountEventArgs($"Начислены проценты в размере: {increment}", increment));
+            OnCalculated(new AccountEventArgs($"Начислены проценты в размере: {increment}. Ваш баланс: {CurrentSum}. Номер счета: {Id}", increment));
         }
     }
 }

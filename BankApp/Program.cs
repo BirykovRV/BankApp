@@ -13,7 +13,7 @@ namespace BankApp
                 ConsoleColor color = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.DarkGreen; // выводим список команд зеленым цветом
                 Console.WriteLine("1. Открыть счет \t 2. Вывести средства  \t 3. Добавить на счет");
-                Console.WriteLine("4. Закрыть счет \t 5. Пропустить день \t 6. Выйти из программы");
+                Console.WriteLine("4. Закрыть счет \t 5. Пропустить месяц \t 6. Выйти из программы");
                 Console.WriteLine("Введите номер пункта:");
                 Console.ForegroundColor = color;
                 try
