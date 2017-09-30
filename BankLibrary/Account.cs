@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankLibrary
 {
-    class Account : IAccount
+    public abstract class Account : IAccount
     {
         // Событие, при снятии денег
         protected internal event AccountStateHandler Withdrawed;
