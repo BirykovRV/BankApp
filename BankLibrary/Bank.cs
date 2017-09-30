@@ -85,8 +85,7 @@ namespace BankLibrary
         // закрытие счета
         public void Close(int id)
         {
-            int index;
-            T account = FindAccount(id, out index);
+            T account = FindAccount(id, out int index);
             if (account == null)
             {
                 throw new Exception("Счет не найден");
