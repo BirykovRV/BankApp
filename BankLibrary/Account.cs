@@ -112,7 +112,7 @@ namespace BankLibrary
 
         protected internal void IncrementDays()
         {
-            days++;
+            days += 30;
         }
 
         // Начисление процента
